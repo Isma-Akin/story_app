@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
     PageController controller = PageController(initialPage: images.length - 1);
     controller.addListener(() {
       setState(() {
-        currentPage = controller.page;
+        currentPage = controller.page!;
       });
     });
     return Scaffold(
@@ -251,7 +251,7 @@ class CardScrollWidget extends StatelessWidget {
         var primaryCardLeft = safeWidth - widthOfPrimaryCard;
         var horizontalInset = primaryCardLeft / 2;
 
-        List<Widget> cardList = List();
+        List<Widget> cardList = [];
 
         for (var i = 0; i < images.length; i++) {
           var delta = i - currentPage;
