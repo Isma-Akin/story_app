@@ -150,6 +150,75 @@ class _MyHomePageState extends State<MyHomePage> {
                           },),
                     )
                   ],
+                ),
+                Padding(padding: EdgeInsets.symmetric(
+                    horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text("Favourite",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 46.0,
+                            fontFamily: "Callibre-Semibold",
+                            letterSpacing: 1.0,
+                          )),
+                      IconButton(onPressed: () {},
+                        icon: Icon(
+                          CustomIcons.option,
+                          size: 12.0,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Center(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 22.0,
+                                vertical: 6.0),
+                            child: Text("Latest",
+                              style: TextStyle(
+                                  color: Colors.white
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15.0,),
+                      Text("9+ Stories",
+                        style: TextStyle(
+                            color: Colors.blueAccent
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 18.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset("assets/image_02.jpg", width: 296.0,
+                            height: 222.0),
+                      ),
+                    )
+                  ],
                 )
               ],
             )
@@ -167,7 +236,7 @@ class CardScrollWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new AspectRatio(aspectRatio: widgetAspectRatio,
+    return AspectRatio(aspectRatio: widgetAspectRatio,
     child: LayoutBuilder(
       builder: (context,constraints) {
         var width = constraints.maxWidth;
@@ -182,7 +251,7 @@ class CardScrollWidget extends StatelessWidget {
         var primaryCardLeft = safeWidth - widthOfPrimaryCard;
         var horizontalInset = primaryCardLeft / 2;
 
-        List<Widget> cardList = new List();
+        List<Widget> cardList = List();
 
         for (var i = 0; i < images.length; i++) {
           var delta = i - currentPage;
@@ -232,8 +301,21 @@ class CardScrollWidget extends StatelessWidget {
                               ),
                               ),
                               SizedBox(height: 10.0,),
-                              Container(
-                                padding: ,
+                              Padding(
+                                padding: const EdgeInsets.only(left: 12.0, bottom: 12.0),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 22.0,
+                                    vertical: 6.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.blueAccent,
+                                    borderRadius: BorderRadius.circular(20.0)
+                                  ),
+                                  child: Text("Read Later",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
                               )
                             ],
                           ),
