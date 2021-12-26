@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:story_app/CustomIcons.dart';
+import 'package:story_app/customIcons.dart';
 import 'data.dart';
 import 'dart:math';
 
