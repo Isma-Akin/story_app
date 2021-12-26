@@ -90,28 +90,38 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 ),
-                Row(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFff6e6e),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: Center(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 22.0,
-                          vertical: 6.0),
-                          child: Text("Animated",
-                            style: TextStyle(
-                              color: Colors.white
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xFFff6e6e),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Center(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 22.0,
+                            vertical: 6.0),
+                            child: Text("Animated",
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
                             ),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 15.0,),
+                      Text("25+ Stories",
+                        style: TextStyle(
+                          color: Colors.blueAccent
+                        ),
+
                       )
-                      ,
-                    )
-                  ],
+                    ],
+                  ),
                 )
               ],
             )
