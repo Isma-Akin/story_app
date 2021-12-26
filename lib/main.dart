@@ -230,6 +230,10 @@ class CardScrollWidget extends StatelessWidget {
                                   fontFamily: "SF-Pro-Text-Regular"
                                 ),
                               ),
+                              ),
+                              SizedBox(height: 10.0,),
+                              Container(
+                                padding: ,
                               )
                             ],
                           ),
