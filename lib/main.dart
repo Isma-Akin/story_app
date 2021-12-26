@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:story_app/CustomIcons.dart';
 
@@ -87,7 +88,31 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                     )
                   ],
-                ),)
+                ),
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFff6e6e),
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 22.0,
+                          vertical: 6.0),
+                          child: Text("Animated",
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
+                          ),
+                        ),
+                      )
+                      ,
+                    )
+                  ],
+                )
               ],
             )
         )
