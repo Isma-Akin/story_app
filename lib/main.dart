@@ -139,7 +139,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Stack(
                   children: <Widget>[
                   CardScrollWidget(currentPage),
-
                     Positioned.fill(
                       child: PageView.builder(
                           itemCount: images.length,
@@ -227,7 +226,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }}
 
 class CardScrollWidget extends StatelessWidget {
-
   var currentPage;
   var padding = 20.0;
   var verticalInset = 20.0;
