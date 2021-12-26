@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       left: 12.0, right: 12.0, top: 30.0,
                       bottom: 8.0),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       IconButton(
                         onPressed: () {},
@@ -65,7 +66,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                )
+                ),
+                Padding(padding: EdgeInsets.symmetric(
+                    horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("Trending",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 46.0,
+                      fontFamily: "Callibre-Semibold",
+                      letterSpacing: 1.0,
+                    )),
+                    IconButton(onPressed: () {},
+                        icon: Icon(
+                          CustomIcons.option,
+                          size: 12.0,
+                          color: Colors.white,
+                        ),
+                    )
+                  ],
+                ),)
               ],
             )
         )
