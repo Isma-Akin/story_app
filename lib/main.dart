@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:story_app/CustomIcons.dart';
 import 'data.dart';
+import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -160,6 +161,7 @@ class CardScrollWidget extends StatelessWidget {
 
   var currentPage;
   var padding = 20.0;
+  var verticalInset = 20.0;
 
   CardScrollWidget(this.currentPage);
 
@@ -173,6 +175,22 @@ class CardScrollWidget extends StatelessWidget {
 
         var safeWidth = width - 2 * padding;
         var safeHeight = height - 2 * padding;
+
+        var heightOfPrimaryCard = safeHeight;
+        var widthOfPrimaryCard = heightOfPrimaryCard * cardAspectRatio;
+
+        var primaryCardLeft = safeWidth - widthOfPrimaryCard;
+        var horizontalInset = primaryCardLeft / 2;
+
+
+        for (var i = 0; i < images.length; i++) {
+          var delta = i - currentPage;
+
+          var cardItem = Positioned.directional(
+            top: padding + verticalInset * max(-delta,0.0),
+
+              textDirection: textDirection, child: child)
+        }
       },
     ),);
   }
