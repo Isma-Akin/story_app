@@ -37,29 +37,37 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF2d3447),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 30.0,
-              bottom: 8.0),
-              child: Row(
-                children: <Widget>[
-                 IconButton(
-                     onPressed: () {},
-                     icon: Icon(
-                       CustomIcons.menu,
-                       color: Colors.white,
-                       size: 30.0,
-                     ),
-
-                 ),
-                ],
-              ),
+        backgroundColor: Color(0xFF2d3447),
+        body: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 12.0, right: 12.0, top: 30.0,
+                      bottom: 8.0),
+                  child: Row(
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          CustomIcons.menu,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.search,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             )
-          ],
         )
-      )
-
     );
+  }}
