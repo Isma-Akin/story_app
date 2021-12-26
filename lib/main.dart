@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 var cardAspectRatio = 12.0 / 16.0;
-var widgetAspectRatio = cardAspectRatio * 12;
+var widgetAspectRatio = cardAspectRatio * 1.2;
 
 class _MyHomePageState extends State<MyHomePage> {
 
