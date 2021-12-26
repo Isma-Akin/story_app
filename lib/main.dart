@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:story_app/CustomIcons.dart';
+import 'data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,10 +34,21 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+var cardAspectRatio = 12.0 / 16.0;
+var widgetAspectRatio = cardAspectRatio * 12;
+
 class _MyHomePageState extends State<MyHomePage> {
+
+  var currentPage = images.length - 1.0;
 
   @override
   Widget build(BuildContext context) {
+    PageController controller = PageController(initialPage: images.length - 1);
+    controller.addListener(() {
+      setState(() {
+        currentPage = controller.page
+      });
+    })
     return Scaffold(
         backgroundColor: Color(0xFF2d3447),
         body: SingleChildScrollView(
@@ -122,9 +134,46 @@ class _MyHomePageState extends State<MyHomePage> {
                       )
                     ],
                   ),
+                ),
+                Stack(
+                  children: <Widget>[
+                  CardScrollWidget(currentPage),
+
+                    Positioned.fill(
+                      child: PageView.builder(
+                          itemCount: images.length,
+                          controller: controller,
+                          reverse: true,
+                          itemBuilder: (context, index) {
+                            return Container();
+                          },),
+                    )
+                  ],
                 )
               ],
             )
         )
     );
   }}
+
+class CardScrollWidget extends StatelessWidget {
+
+  var currentPage;
+  var padding = 20.0;
+
+  CardScrollWidget(this.currentPage);
+
+  @override
+  Widget build(BuildContext context) {
+    return new AspectRatio(aspectRatio: widgetAspectRatio,
+    child: LayoutBuilder(
+      builder: (context,constraints) {
+        var width = constraints.maxWidth;
+        var height = constraints.maxHeight;
+
+        var safeWidth = width - 2 * padding;
+        var safeHeight = height - 2 * padding;
+      },
+    ),);
+  }
+}
